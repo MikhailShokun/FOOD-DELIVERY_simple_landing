@@ -1,7 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
-
-/* food delivery */
-
 *,
 *::before,
 *::after {
@@ -9,6 +6,7 @@
 }
 
 body {
+    background: #E5E5E5;
     box-sizing: border-box;
     font-family: 'Montserrat';
     font-style: normal;
@@ -19,16 +17,16 @@ body {
 }
 
 .page {
-    width: 1440px;
-    height: 3000px;
+    max-width: 1440px;
+    height: auto;
     overflow: hidden;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     flex: 1 1 auto;
 }
 
-
-/* header */
+.content {
+    background: #ffffff;
+}
 
 .header {
     position: absolute;
@@ -77,13 +75,10 @@ a:active {
     opacity: 50%;
 }
 
-a:visited {
-    color: rgb(8, 6, 6);
-}
-
 .header__info-list {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     text-decoration: none;
 }
 
@@ -95,9 +90,15 @@ a:visited {
     margin-right: 0;
 }
 
+.orange_phone {
+    margin-top: 10px;
+    padding-right: 10px;
+}
+
 .phone {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     color: #000;
     font-weight: 600;
     font-size: 18px;
@@ -112,9 +113,6 @@ a:visited {
     line-height: 22px;
     text-decoration: none;
 }
-
-
-/* intro */
 
 .intro__container {
     display: flex;
@@ -131,7 +129,7 @@ a:visited {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 175px;
-    width: 800px;
+    max-width: 620px;
 }
 
 .intro__title {
@@ -160,9 +158,9 @@ a:visited {
 
 .intro__main-pizza {
     position: absolute;
-    top: 390px;
-    width: 850;
-    height: 590px;
+    top: 320px;
+    left: 350px;
+    width: 800;
     z-index: 1;
 }
 
@@ -197,12 +195,29 @@ a:visited {
     z-index: 1;
 }
 
+.peppercornsOne {
+    position: absolute;
+    left: 250px;
+    bottom: 220px;
+}
+
+.peppercornsTwo {
+    position: absolute;
+    right: 200px;
+    bottom: 160px;
+}
+
+.shrimp_shadow {
+    position: absolute;
+    right: 30px;
+    top: 50px;
+}
+
 .intro__mushroom-shadow {
     position: absolute;
     width: 100px;
     left: 135px;
     top: 550px;
-    opacity: 0.1;
     z-index: 0;
 }
 
@@ -210,42 +225,21 @@ a:visited {
     position: absolute;
     width: 45px;
     height: 45px;
-    left: 770px;
-    top: 582px;
+    left: 830px;
+    top: 520px;
     z-index: 2;
 }
 
-.intro__ellipse-plus {
+.offer {
     position: absolute;
-    width: 12px;
-    left: 787px;
-    top: 595px;
-    z-index: 3;
+    top: 450px;
+    right: 200px;
 }
 
-.intro__pointer {
+.pizza_shadow {
     position: absolute;
-    width: 140px;
-    left: 820px;
-    top: 540px;
-}
-
-.delivery__free {
-    position: absolute;
-    width: 200px;
-    height: 45px;
-    left: 985px;
-    top: 515px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    text-align: right;
-    color: #000000;
-}
-
-.uah__700 {
-    color: #fe5b2c;
-    font-weight: 600;
+    right: 40px;
+    bottom: 80px;
 }
 
 .shopping_basket {
@@ -256,8 +250,21 @@ a:visited {
     top: 850px;
 }
 
+.ribs {
+    position: absolute;
+    left: 0;
+    bottom: -320px;
+}
 
-/* assortment title*/
+.hand {
+    position: absolute;
+    right: 0;
+    bottom: -550px;
+}
+
+.assortment {
+    position: relative;
+}
 
 .assortment__title {
     margin-top: 140px;
@@ -266,9 +273,6 @@ a:visited {
     line-height: 60px;
     text-align: center;
 }
-
-
-/* categories */
 
 .categories__row {
     max-width: 830px;
@@ -282,8 +286,10 @@ a:visited {
 }
 
 .category__item-link {
+    font-family: Montserrat;
     background: linear-gradient(0deg, #ECEEF6, #ECEEF6), #59AAF1;
     border-radius: 45px;
+    border-style: none;
     height: 55px;
     width: 145px;
     display: flex;
@@ -292,7 +298,6 @@ a:visited {
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
-    color: #151515
 }
 
 .category__item-link:hover,
@@ -304,9 +309,6 @@ a:visited {
     opacity: 100%;
 }
 
-
-/* assortment - item */
-
 .columms__row {
     margin-top: 50px;
     display: flex;
@@ -315,6 +317,7 @@ a:visited {
 
 .columns__column {
     flex: 0 0 25%;
+    padding: 10px;
 }
 
 .item__row {
@@ -387,9 +390,9 @@ a:visited {
 
 .pizza__addToShopping {
     border-radius: 50%;
-    width: 33px;
-    height: 33px;
-    border: 2px solid #ECEEF6;
+    border: 2px solid #FFFFFF;
+    width: 35px;
+    height: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -398,8 +401,184 @@ a:visited {
     bottom: -45px;
 }
 
+.more__button {
+    position: absolute;
+    left: 685px;
+    bottom: -110px;
+}
 
-/* footer */
+.more__link {
+    text-decoration: none;
+}
+
+.more__image {
+    width: 60px;
+}
+
+.cauliflower {
+    position: absolute;
+    bottom: -260px;
+}
+
+.gallery {
+    position: relative;
+    margin-top: 220px;
+}
+
+.gallery__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery__photo {
+    height: 260px;
+}
+
+.insta__box {
+    position: absolute;
+    left: 490px;
+    top: 40px;
+    width: 480px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45.04deg, #FD9924 -51.05%, #F65B16 134.89%);
+    box-shadow: 0px 70px 90px rgba(253, 55, 36, 0.2), 0px 35px 50px rgba(253, 55, 36, 0.2), 0px 20px 25px rgba(253, 55, 36, 0.2);
+    border-radius: 15px;
+    z-index: 2;
+}
+
+.insta__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.insta__link {
+    border: 1px solid #9dacc1;
+    border-radius: 15px;
+    padding: 55px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.email__insta {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.feedback__form {
+    position: relative;
+    margin-top: 130px;
+    background-color: #F0F5FB;
+    height: 575px;
+    margin-bottom: 40px;
+}
+
+.feedback__form-wrapper {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.feedback__title {
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: 80px;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 72px;
+    text-align: center;
+}
+
+.feedback__form-in {
+    border: none;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.in {
+    border-style: none;
+    width: 260px;
+    height: 60px;
+    border-radius: 50px;
+}
+
+.input__name {
+    padding-left: 30px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.input__tel {
+    padding-left: 30px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.input__button {
+    font-family: Montserrat;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    background: linear-gradient(180deg, #FE5626 0%, #F23F0E 100%), #59AAF1;
+    box-shadow: 0px 4px 8px rgba(205, 169, 41, 0.26);
+}
+
+.car__absolute {
+    position: absolute;
+    left: 450px;
+    top: 365px;
+}
+
+.tomatoes_and_herbs-One {
+    position: absolute;
+    top: 130px;
+}
+
+.tomatoes_and_herbs-Two {
+    position: absolute;
+    right: 0;
+    top: 130px;
+}
+
+.half__mashroom {
+    position: absolute;
+    top: 100px;
+}
+
+.peppercornsThree {
+    position: absolute;
+    left: 220px;
+}
+
+.tomatoShadowTwo {
+    position: absolute;
+    bottom: 40px;
+}
+
+.pepper {
+    position: absolute;
+    right: 80px;
+    top: 290px;
+}
+
+.shashlik {
+    position: absolute;
+    right: 120px;
+    bottom: 0px;
+}
 
 .footer__wrapper {
     width: 100%;
