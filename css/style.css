@@ -17,7 +17,7 @@ body {
 }
 
 .page {
-    max-width: 1440px;
+    min-width: 1440px;
     height: auto;
     overflow: hidden;
     margin: 0 auto;
@@ -160,7 +160,7 @@ a:active {
     position: absolute;
     top: 320px;
     left: 350px;
-    width: 800;
+    width: 800px;
     z-index: 1;
 }
 
@@ -225,15 +225,15 @@ a:active {
     position: absolute;
     width: 45px;
     height: 45px;
-    left: 830px;
-    top: 520px;
+    left: 800px;
+    top: 510px;
     z-index: 2;
 }
 
 .offer {
     position: absolute;
-    top: 450px;
-    right: 200px;
+    top: 440px;
+    left: 845px;
 }
 
 .pizza_shadow {
